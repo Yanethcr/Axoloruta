@@ -1,0 +1,13 @@
+{
+  "name": "recarga-cdmx",
+  "private": true,
+  "packageManager": "pnpm@12.3.4",
+  "scripts": {
+    "build": "pnpm -r build",
+    "start": "concurrently -n api,web \"pnpm --filter recarga-backend start:prod\" \"pnpm --filter recarga-frontend start\"",
+    "dev": "concurrently -n api,web \"pnpm --filter recarga-backend start:dev\" \"pnpm --filter recarga-frontend dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
